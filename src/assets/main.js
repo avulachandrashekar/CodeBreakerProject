@@ -3,7 +3,7 @@ let attempt = document.getElementById('attempt');
 
 function guess() {
     let input = document.getElementById('user-guess');
-    if(answer.length === 0 && attempt.value ){
+    if(!(answer.value && attempt.value) ){
         setHiddenFields();
     };
     if(!validateInput(input.value)){
@@ -12,6 +12,8 @@ function guess() {
     else
     {
         ++attempt.value;
+        var attemptDiv = document.getElementById('attemptNumber');
+        attemptDiv.innerHTML = (10 - attempt.value);
     };
     if(getResults(input.value)){
         setMessage("You Win! :)");
@@ -94,8 +96,7 @@ function getResults(param){
             inner += '<span class="glyphicon glyphicon-remove"></span>';
         }    
     }
-    inner = inner + '</span><div class="col-md-6">';
-    resultDiv.innerHTML = inner;
+    resultDiv.innerHTML = inner + '</span><div class="col-md-6">';
     if(correctGuess === 4){
         return true;
     }else

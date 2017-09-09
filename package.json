@@ -6,10 +6,9 @@
   "scripts": {
     "start": "browser-sync start --server ./src --files ./src",
     "test": "mocha -t 20000 test/*.spec.js",
-    "test-watch": "npm test -- --bail --watch",
-    "deploy:github-pages": "git subtree push --prefix src origin gh-pages"
+    "test-watch": "npm test -- --bail --watch"
   },
-  "author": "Eric J Fisher <eric@codeschool.com>",
+  "author": "Avula Chandra Shekar",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.14.0",
@@ -21,5 +20,8 @@
   },
   "engines": {
     "node": ">=6"
+  },
+  "dependencies": {
+    "express": "^4.15.4"
   }
 }
