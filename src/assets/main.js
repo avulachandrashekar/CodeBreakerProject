@@ -1,7 +1,6 @@
 let answer = document.getElementById('answer');
 let attempt = document.getElementById('attempt');
 
-
 function guess() {
     let input = document.getElementById('user-guess');
     if(answer.length === 0 && attempt.value ){
@@ -12,7 +11,7 @@ function guess() {
     } else {
         ++attempt.value;
     };
-    if(getResults(input)){
+    if(getResults(input.value)){
         setMessage("You win! :)");
         showAnswer(true);
         showReplay();
@@ -73,17 +72,17 @@ function validateInput(param){
 
 function getResults(param){
     let correctGuess = 0;
-    let result = param.value;
+    let result = param;
     let resultDiv = document.getElementById('results');
     let inner = '<div class=""row""><span class=""col-md-6"">';
-    for(var i = 0 ; i < result.length; i++)
+    for(var i = 0 ; i < result.length ; i++)
     {
         if(answer.value[i] === result[i]){
             inner += '<span class="glyphicon glyphicon-ok"></span>';
             correctGuess++;
             continue;
         }
-        else if(answer.value.indexof(result[i]) > -1)
+        else if(answer.value.indexOf(result[i]) > -1)
         {
                 inner += '<span class="glyphicon glyphicon-transfer"></span>';
             continue;}
