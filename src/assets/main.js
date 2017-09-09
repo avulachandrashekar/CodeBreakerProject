@@ -16,13 +16,11 @@ function guess() {
         setMessage("You win! :)");
         showAnswer(true);
         showReplay();
-        return;
     } else {
         if(attempt >= 10){
             setMessage("You Lose! :(");
             showAnswer(false);
             showReplay();
-            return;
         } else {
             setMessage("Incorrect, try again.")
         }
@@ -75,7 +73,7 @@ function validateInput(param){
 
 function getResults(param){
     let correctGuess = 0;
-    let result = param;
+    let result = param.value;
     let resultDiv = document.getElementById('results');
     let inner = '<div class=""row""><span class=""col-md-6"">';
     for(var i = 0 ; i < result.length; i++)
