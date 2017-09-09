@@ -8,6 +8,7 @@
     "test": "mocha -t 20000 test/*.spec.js",
     "test-watch": "npm test -- --bail --watch"
   },
+  
   "author": "Avula Chandra Shekar",
   "license": "MIT",
   "devDependencies": {
