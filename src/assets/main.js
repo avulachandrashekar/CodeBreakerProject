@@ -8,7 +8,9 @@ function guess() {
     };
     if(!validateInput(input.value)){
         return false;
-    } else {
+    } 
+    else
+    {
         ++attempt.value;
     };
     if(getResults(input.value)){
@@ -23,7 +25,6 @@ function guess() {
         } else 
         {
             setMessage("Incorrect, try again.")
-            ++attempt.value;
         }
     }
 }
