@@ -47,9 +47,8 @@ function showReplay(){
     replayDiv.style.display = 'block';
 }
 
-}
-
-function setHiddenFields(){
+function setHiddenFields()
+{
     answer.value = (Math.floor(Math.random() * 10000)).toString();
     while(answer.value.length < 4){
         answer = "0" + answer;
@@ -68,7 +67,7 @@ function validateInput(param){
     }
     else
     {
-        setMessage("Guesses must be exactly 4 characters long");
+        setMessage("Guesses must be exactly 4 characters long.");
         return false;
     }
 }
@@ -77,7 +76,7 @@ function validateInput(param){
 function getResults(param){
     let correctGuess = 0;
     let result = param;
-    var resultDiv = document.getElementById('results');
+    let resultDiv = document.getElementById('results');
     let inner = '<div class=""row""><span class=""col-md-6"">';
     for(var i = 0 ; i < result.length; i++)
     {
@@ -94,7 +93,7 @@ function getResults(param){
             inner += '<span class="glyphicon glyphicon-remove"></span>';
         }    
     }
-    var inner =  + input + '</span><div class="col-md-6">';
+    inner =  + input + '</span><div class="col-md-6">';
     resultDiv.innerHTML = inner;
     if(correctGuess === 4){
         return true;
