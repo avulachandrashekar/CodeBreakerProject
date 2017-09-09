@@ -90,7 +90,7 @@ function getResults(param){
             inner += '<span class="glyphicon glyphicon-remove"></span>';
         }    
     }
-    inner =  + input + '</span><div class="col-md-6">';
+    inner = inner + '</span><div class="col-md-6">';
     resultDiv.innerHTML = inner;
     if(correctGuess === 4){
         return true;
