@@ -4,7 +4,7 @@
   "description": "Code Breaker Project",
   "private": true,
   "scripts": {
-    "start": "browser-sync start --server ./src --files ./src",
+    "start": "node app/app.js",
     "test": "mocha -t 20000 test/*.spec.js",
     "test-watch": "npm test -- --bail --watch"
   },
