@@ -31,9 +31,9 @@ function showAnswer(param){
     element.innerHTML = answer;
     if(param)
     {
-        element.className = 'success';
+        element.className = ' success';
     } else {
-        element.className = 'failure';
+        element.className = ' failure';
     }
 }
 
