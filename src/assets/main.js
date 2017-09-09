@@ -39,6 +39,7 @@ function showAnswer(param){
     }else{
         element.className = 'failure';
     }
+}
 
 function showReplay(){
     var guessingDiv = document.getElementById('guessing-div');
