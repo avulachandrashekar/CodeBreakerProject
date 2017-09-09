@@ -32,7 +32,7 @@ function guess() {
 
 function showAnswer(param){
     var element = document.getElementById('code');
-    element.value = answer;
+    element.innerHTML = answer;
     if(param)
     {
         element.className = "success";
