@@ -6,25 +6,24 @@ function guess() {
     let input = document.getElementById('user-guess');
     if(answer.length === 0 && attempt.value ){
         setHiddenFields();
-    }
+    };
     if(!validateInput(input.value)){
         return false;
-    }else{
+    } else {
         ++attempt.value;
-    }
+    };
     if(getResults(input)){
         setMessage("You win! :)");
         showAnswer(true);
         showReplay();
         return;
-    }
-    else{
+    } else {
         if(attempt >= 10){
             setMessage("You Lose! :(");
             showAnswer(false);
             showReplay();
             return;
-        }else{
+        } else {
             setMessage("Incorrect, try again.")
         }
     }
@@ -33,10 +32,10 @@ function guess() {
 function showAnswer(param){
     var element = document.getElementById('code');
     element.innerHTML = answer;
-
-    if(param){
+    if(param)
+    {
         element.className = 'success';
-    }else{
+    } else {
         element.className = 'failure';
     }
 }
@@ -51,8 +50,8 @@ function showReplay(){
 function setHiddenFields()
 {
     answer.value = (Math.floor(Math.random() * 10000)).toString();
-    while(answer.length < 4){
-        answer = "0" + answer;
+    while(answer.value.length < 4){
+        answer.value = "0" + answer.value;
     }
     attempt.value = 0;
 }
