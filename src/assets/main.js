@@ -17,8 +17,9 @@ function guess() {
         setMessage("You Win! :)");
         showAnswer(true);
         showReplay();
-    } else {
-        if(attempt >= 10){
+    } else 
+    {
+        if(attempt.value >= 10){
             setMessage("You Lose! :(");
             showAnswer(false);
             showReplay();
@@ -97,6 +98,8 @@ function getResults(param){
     resultDiv.innerHTML = inner;
     if(correctGuess === 4){
         return true;
-    }
+    }else
+    {
     return false;
+    }
 }
