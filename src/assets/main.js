@@ -12,7 +12,7 @@ function guess() {
         ++attempt.value;
     };
     if(getResults(input.value)){
-        setMessage("You win!");
+        setMessage("You Win!");
         showAnswer(true);
         showReplay();
     } else {
@@ -20,8 +20,10 @@ function guess() {
             setMessage("You Lose!");
             showAnswer(false);
             showReplay();
-        } else {
+        } else 
+        {
             setMessage("Incorrect, try again.")
+            ++attempt.value;
         }
     }
 }
