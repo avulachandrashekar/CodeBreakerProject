@@ -4,7 +4,7 @@ let attempt = document.getElementById('attempt');
 
 function guess() {
     let input = document.getElementById('user-guess');
-    if(answer.length === 0 && attempt.length === 0 ){
+    if(answer.value.length === 0 && !attempt.value ){
         setHiddenFields();
     }
     if(!validateInput(input.value)){
