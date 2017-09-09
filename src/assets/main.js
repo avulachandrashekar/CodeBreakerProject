@@ -12,12 +12,12 @@ function guess() {
         ++attempt.value;
     };
     if(getResults(input.value)){
-        setMessage("You win! :)");
+        setMessage("You win!");
         showAnswer(true);
         showReplay();
     } else {
         if(attempt >= 10){
-            setMessage("You Lose! :(");
+            setMessage("You Lose!");
             showAnswer(false);
             showReplay();
         } else {
@@ -31,9 +31,9 @@ function showAnswer(param){
     element.innerHTML = answer;
     if(param)
     {
-        element.className = ' success';
+        element.className = "success";
     } else {
-        element.className = ' failure';
+        element.className = "failure";
     }
 }
 
